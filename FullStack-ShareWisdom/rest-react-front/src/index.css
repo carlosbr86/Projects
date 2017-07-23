@@ -1,0 +1,228 @@
+/* Shared */
+
+* {
+  box-sizing: border-box;
+
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #212121;
+  font-family: sans-serif;
+  color: white;
+}
+
+.container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  background: #212121;
+  border-radius: 3px;
+}
+
+@media (min-width: 769px) {
+  .container {
+    margin: 2.5rem auto;
+  }
+}
+
+/* Result Component */
+.result {
+  padding: 1.5rem 2.5rem;
+  color: white;
+  background: #424242;
+}
+
+/* Quiz Component */
+.answerOptions {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: white;
+  background: #424242;
+}
+
+/* QuestionCount Component */
+.questionCount {
+  padding: 1.5rem 2.5rem 0;
+  font-size: 14px;
+  color: white;
+  background: #424242;
+}
+
+/* Question Component */
+.question {
+  margin: 0;
+  padding: 0.5rem 2.5rem 1.5rem 2.5rem;
+  color: white;
+  background: #424242;
+}
+
+/* AnswerOption Component */
+.answerOption {
+  border-top: 1px solid #eee;
+}
+
+.answerOption:hover {
+  background-color: #212121;
+}
+
+.radioCustomButton {
+    position: absolute;
+    width: auto;
+    opacity: 0;
+}
+
+.radioCustomButton,
+.radioCustomLabel {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.radioCustomLabel {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 1.5rem 2.5rem 1.5rem 5rem;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.radioCustomButton ~ .radioCustomLabel:before {
+    position: absolute;
+    top: 20px;
+    left: 38px;
+    width: 28px;
+    height: 28px;
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    background: #424242 ;
+    border: 1px solid #bbb;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.radioCustomButton:checked ~ .radioCustomLabel:before {
+    content: '';
+    background-size: 27px;
+    border-color: #8BC53F;
+}
+
+/* Animation */
+.fade-enter {
+    opacity: 0;
+}
+
+.fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out 0.3s;
+}
+
+.fade-leave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 1;
+}
+
+.fade-leave.fade-leave-active {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-appear {
+    opacity: 0;
+}
+
+.fade-appear.fade-appear-active {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.player{
+  /*border: 2px dashed blue;*/
+}
+.sideBar{
+
+  /*width: 15%;*/
+  /*border: 2px dashed red;*/
+  background: '#424242';
+  height: 100%;
+}
+.spa{
+
+  /*width: 85%;*/
+  background: #212121;
+  height: 600px;
+  /*border: 2px dashed yellow;*/
+  height: 100%;
+}
+.learn, .quizPage, .about{
+  /*border: 2px dashed green;*/
+  height: 100%;
+}
+
+a{
+  display: block;
+  font-size: 15px;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  /*height: 5vh;*/
+  padding: 5px;
+  color: white;
+  /*border: 2px dashed purple;*/
+}
+
+.App-intro {
+  font-size: large;
+}
+h4{
+  display: inline;
+}
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.content{
+    /*border: 2px dashed blue;*/
+    height: 95vh;
+}
+
+.imgCourseList{
+  width: 200px;
+  height: auto;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+.video-container iframe,
+.video-container object,
+.video-container embed,
+.video-containerReactPlayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 95%;
+    height: 95%;
+}    
